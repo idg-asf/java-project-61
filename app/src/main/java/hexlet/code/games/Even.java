@@ -14,7 +14,7 @@ public class Even extends Engine {
     protected HashMap<String, String> getQuestionAndAnswer() {
         int numberForQuestion = getNextInt();
         String question = "Question: " + numberForQuestion;
-        String answer = getCorrectAnswer(numberForQuestion);
+        String answer = getAnswer(numberForQuestion);
         HashMap<String, String> result = new HashMap<>();
         result.put(questionKeyValue, question);
         result.put(answerKeyValue, answer);
@@ -22,7 +22,7 @@ public class Even extends Engine {
         return result;
     }
 
-    private String getCorrectAnswer(int number) {
+    private String getAnswer(int number) {
         return number % 2 == 0 ? "yes" : "no";
     }
 }

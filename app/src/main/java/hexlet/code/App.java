@@ -3,6 +3,7 @@ package hexlet.code;
 
 import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
+import hexlet.code.games.Gcd;
 
 import java.util.Scanner;
 
@@ -13,6 +14,7 @@ public class App {
                 1 - Greet
                 2 - Even
                 3 - Calc
+                4 - GCD
                 0 - Exit""");
         Scanner scanner = new Scanner(System.in);
         int userChoice = scanner.nextInt();
@@ -26,6 +28,10 @@ public class App {
             case 3 -> {
                 Calc calcGame = new Calc();
                 calcGame.start();
+            }
+            case 4 -> {
+                Gcd gcdGame = new Gcd();
+                gcdGame.start();
             }
             case 0 -> System.out.println("Bye");
             default -> System.out.println("No such number is present");
