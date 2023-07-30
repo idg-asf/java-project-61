@@ -24,13 +24,13 @@ public final class Progression extends Engine {
             value += step;
             if (i == hiddenPosition) {
                 question.append(" ..");
-                result.put(getQuestionKeyValue(), String.valueOf(value));
+                result.put(getAnswerKeyValue(), String.valueOf(value));
             } else {
                 question.append(" ").append(value);
             }
         }
 
-        result.put(getAnswerKeyValue(), String.valueOf(question));
+        result.put(getQuestionKeyValue(), String.valueOf(question));
         return result;
     }
 
