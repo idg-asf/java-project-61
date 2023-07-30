@@ -11,13 +11,13 @@ import java.util.Scanner;
 
 public class App {
 
-    public static final int greetMenuNumber = 1;
-    public static final int evenMenuNumber = 2;
-    public static final int calcMenuNumber = 3;
-    public static final int gcdMenuNumber =  4;
-    public static final int progressionMenuNumber = 5;
-    public static final int primeMenuNumber = 6;
-    public static final int exitMenuNumber = 0;
+    public static final int GREET_MENU_NUMBER = 1;
+    public static final int EVEN_MENU_NUMBER = 2;
+    public static final int CALC_MENU_NUMBER = 3;
+    public static final int GCD_MENU_NUMBER =  4;
+    public static final int PROGRESSION_MENU_NUMBER = 5;
+    public static final int PRIME_MENU_NUMBER = 6;
+    public static final int EXIT_MENU_NUMBER = 0;
 
     public static void main(String[] args) {
 
@@ -34,28 +34,28 @@ public class App {
         int userChoice = scanner.nextInt();
         System.out.println("Your choice: " + userChoice + "\n");
         switch (userChoice) {
-            case greetMenuNumber -> Cli.start();
-            case evenMenuNumber -> {
+            case GREET_MENU_NUMBER -> Cli.start();
+            case EVEN_MENU_NUMBER -> {
                 Even evenGame = new Even();
                 evenGame.start();
             }
-            case calcMenuNumber -> {
+            case CALC_MENU_NUMBER -> {
                 Calc calcGame = new Calc();
                 calcGame.start();
             }
-            case gcdMenuNumber -> {
+            case GCD_MENU_NUMBER -> {
                 Gcd gcdGame = new Gcd();
                 gcdGame.start();
             }
-            case progressionMenuNumber -> {
+            case PROGRESSION_MENU_NUMBER -> {
                 Progression progression = new Progression();
                 progression.start();
             }
-            case primeMenuNumber -> {
+            case PRIME_MENU_NUMBER -> {
                 Prime prime = new Prime();
                 prime.start();
             }
-            case exitMenuNumber -> System.out.println("Bye");
+            case EXIT_MENU_NUMBER -> System.out.println("Bye");
             default -> System.out.println("No such number is present");
         }
     }

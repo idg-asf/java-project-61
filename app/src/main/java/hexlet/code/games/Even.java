@@ -16,8 +16,8 @@ public final class Even extends Engine {
         String question = "Question: " + numberForQuestion;
         String answer = getAnswer(numberForQuestion);
         HashMap<String, String> result = new HashMap<>();
-        result.put(questionKeyValue, question);
-        result.put(answerKeyValue, answer);
+        result.put(getQuestionKeyValue(), question);
+        result.put(getAnswerKeyValue(), answer);
 
         return result;
     }

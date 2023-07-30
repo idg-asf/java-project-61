@@ -14,8 +14,8 @@ public final class Prime extends Engine {
         String question = "Question: " + number;
         String answer = getAnswer(number);
         HashMap<String, String> result = new HashMap<>();
-        result.put(questionKeyValue, question);
-        result.put(answerKeyValue, answer);
+        result.put(getQuestionKeyValue(), question);
+        result.put(getAnswerKeyValue(), answer);
 
         return result;
     }

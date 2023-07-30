@@ -18,8 +18,8 @@ public final class Gcd extends Engine {
         int answer = getGcd(firstNumber, secondNumber);
 
         HashMap<String, String> result = new HashMap<>();
-        result.put(questionKeyValue, question);
-        result.put(answerKeyValue, String.valueOf(answer));
+        result.put(getQuestionKeyValue(), question);
+        result.put(getAnswerKeyValue(), String.valueOf(answer));
 
         return result;
     }

@@ -8,10 +8,15 @@ import java.util.Scanner;
 
 public abstract class Engine {
 
-    protected final String questionKeyValue = "Question";
-    protected final String answerKeyValue = "Answer";
+    private final String questionKeyValue = "Question";
+    private final String answerKeyValue = "Answer";
 
-    public void start() {
+
+    /**
+     * Explains the game process. All the games should share the same logic - 3 questions,
+     * continues if an answer is correct, otherwise stops the game.
+     */
+    public final void start() {
         String userName = Cli.start();
         printGameConditions();
         Scanner scanner = new Scanner(System.in);
@@ -38,6 +43,18 @@ public abstract class Engine {
 
     }
 
+
+    public String getQuestionKeyValue() {
+        return questionKeyValue;
+    }
+
+    public String getAnswerKeyValue() {
+        return answerKeyValue;
+    }
+
+    /**
+     * @return Returns a random int value in the range from 1 to 100.
+     */
     protected int getNextInt() {
         Random rand = new Random();
         int lowerBound = 1;
@@ -45,8 +62,14 @@ public abstract class Engine {
         return rand.nextInt(lowerBound, upperBound);
     }
 
+    /**
+     * Prints a game conditions specific for each game
+     */
     protected abstract void printGameConditions();
 
+    /**
+     * @return Returns a Map that consists of two pairs - questions and its value, and answer and its value.
+     */
     protected abstract HashMap<String, String> getQuestionAndAnswer();
 
 }
