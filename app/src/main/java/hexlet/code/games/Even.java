@@ -7,7 +7,7 @@ public class Even extends Engine {
 
     @Override
     protected void printGameConditions() {
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'");
+        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
     }
 
     @Override

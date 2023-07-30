@@ -11,7 +11,7 @@ public class Cli {
                 + "May I have your name?");
 
         String userName = scanner.next();
-        System.out.printf("Hello, %s!%n", userName);
+        System.out.printf("Hello, %s!%n\n", userName);
         return userName;
     }
 }
