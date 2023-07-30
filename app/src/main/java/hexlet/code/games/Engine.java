@@ -22,6 +22,7 @@ public abstract class Engine {
             System.out.println(questionAndAnswer.get(questionKeyValue));
             String userAnswer = scanner.next();
             String correctAnswer = questionAndAnswer.get(answerKeyValue);
+            System.out.println("Your answer: " + userAnswer);
             if (correctAnswer.equals(userAnswer)) {
                 System.out.println("Correct!");
                 questionsCount--;

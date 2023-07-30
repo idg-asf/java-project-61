@@ -22,7 +22,7 @@ public class App {
                 0 - Exit""");
         Scanner scanner = new Scanner(System.in);
         int userChoice = scanner.nextInt();
-        System.out.println("Your choice: " + userChoice);
+        System.out.println("Your choice: " + userChoice + "\n");
         switch (userChoice) {
             case 1 -> Cli.start();
             case 2 -> {
