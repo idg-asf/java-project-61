@@ -2,7 +2,7 @@ package hexlet.code.games;
 
 import java.util.HashMap;
 
-public class Prime extends Engine {
+public final class Prime extends Engine {
     @Override
     protected void printGameConditions() {
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");

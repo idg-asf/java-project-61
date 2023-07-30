@@ -2,7 +2,7 @@ package hexlet.code.games;
 
 import java.util.HashMap;
 
-public class Gcd extends Engine {
+public final class Gcd extends Engine {
     @Override
     protected void printGameConditions() {
         System.out.println("Find the greatest common divisor of given numbers.");

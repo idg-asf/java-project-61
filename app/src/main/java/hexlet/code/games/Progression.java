@@ -3,7 +3,7 @@ package hexlet.code.games;
 import java.util.HashMap;
 import java.util.Random;
 
-public class Progression extends Engine {
+public final class Progression extends Engine {
 
     private final int progressionLength = 10;
     @Override

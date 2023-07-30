@@ -3,7 +3,7 @@ package hexlet.code.games;
 
 import java.util.HashMap;
 
-public class Even extends Engine {
+public final class Even extends Engine {
 
     @Override
     protected void printGameConditions() {
