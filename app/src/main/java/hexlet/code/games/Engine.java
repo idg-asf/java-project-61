@@ -11,6 +11,11 @@ public abstract class Engine {
     private final String questionKeyValue = "Question";
     private final String answerKeyValue = "Answer";
 
+    private final int questionsToAsk = 3;
+
+    private final int lowerBound = 1;
+
+    private final int upperBound = 100;
 
     /**
      * Explains the game process. All the games should share the same logic - 3 questions,
@@ -21,7 +26,7 @@ public abstract class Engine {
         printGameConditions();
         Scanner scanner = new Scanner(System.in);
 
-        int questionsCount = 3;
+        int questionsCount = questionsToAsk;
         while (questionsCount > 0) {
             HashMap<String, String> questionAndAnswer = getQuestionAndAnswer();
             System.out.println(questionAndAnswer.get(questionKeyValue));
@@ -44,10 +49,16 @@ public abstract class Engine {
     }
 
 
+    /**
+     * @return Returns key value for a question.
+     */
     public String getQuestionKeyValue() {
         return questionKeyValue;
     }
 
+    /**
+     * @return Returns key value for an answer.
+     */
     public String getAnswerKeyValue() {
         return answerKeyValue;
     }
@@ -57,13 +68,11 @@ public abstract class Engine {
      */
     protected int getNextInt() {
         Random rand = new Random();
-        int lowerBound = 1;
-        int upperBound = 100;
         return rand.nextInt(lowerBound, upperBound);
     }
 
     /**
-     * Prints a game conditions specific for each game
+     * Prints a game conditions specific for each game.
      */
     protected abstract void printGameConditions();
 
