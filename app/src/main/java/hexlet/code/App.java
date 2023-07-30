@@ -4,6 +4,7 @@ package hexlet.code;
 import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
 import hexlet.code.games.Gcd;
+import hexlet.code.games.Prime;
 import hexlet.code.games.Progression;
 
 import java.util.Scanner;
@@ -16,6 +17,8 @@ public class App {
                 2 - Even
                 3 - Calc
                 4 - GCD
+                5 - Progression
+                6 - Prime
                 0 - Exit""");
         Scanner scanner = new Scanner(System.in);
         int userChoice = scanner.nextInt();
@@ -37,6 +40,10 @@ public class App {
             case 5 -> {
                 Progression progression = new Progression();
                 progression.start();
+            }
+            case 6 -> {
+                Prime prime = new Prime();
+                prime.start();
             }
             case 0 -> System.out.println("Bye");
             default -> System.out.println("No such number is present");
